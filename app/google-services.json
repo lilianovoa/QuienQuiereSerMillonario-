@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "137459788992",
+    "firebase_url": "https://millonariolilia-default-rtdb.firebaseio.com",
+    "project_id": "millonariolilia",
+    "storage_bucket": "millonariolilia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137459788992:android:37f14b510a640abd9c9125",
+        "android_client_info": {
+          "package_name": "com.example.millonariolilia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD3kTOFSMZLDVpAo2e8x-zJep_3vXDK0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
