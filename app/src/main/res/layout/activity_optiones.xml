@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/fondoj"
+    android:background="@mipmap/tesoro"
     tools:context=".OptionesActivity">
 
     <FrameLayout
@@ -26,6 +26,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:backgroundTint="#F6F4F4"
+            android:fontFamily="@font/alata"
             android:gravity="center"
             android:text="Agregar Preguntas"
             android:textColor="#0C0C0C"
@@ -38,6 +39,8 @@
             android:layout_gravity="center|top"
             android:layout_marginTop="552dp"
             android:backgroundTint="#F6F0F0"
+            android:fontFamily="@font/alata"
+            android:gravity="center"
             android:text="Jugar"
             android:textColor="#121111"
             android:textSize="24sp"
@@ -47,10 +50,11 @@
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="76dp"
-            android:fontFamily="@font/aclonica"
+            android:fontFamily="@font/alata"
+            android:gravity="center"
             android:text="Elija la opcion que desea ejecutar:"
             android:textAlignment="center"
-            android:textColor="#FDFCFC"
+            android:textColor="#0B0A0A"
             android:textSize="24sp"
             android:textStyle="bold"
             android:translationY="20dp" />

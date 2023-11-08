@@ -35,29 +35,39 @@ class AgregarActivity : AppCompatActivity() {
     }
     fun guardar(){
         binding.save.setOnClickListener {
-            if(binding.spinner.selectedItem=="Español")
-            {
-                refEspañol.child(refEspañol.push().key.
-                toString()).setValue(Model(binding.editTextText.text.toString(),binding.editTextText2.text.toString()
-                    ,binding.editTextText3.text.toString(),binding.editTextText4.text.toString(),
-                    binding.editTextText5.text.toString(),binding.editTextText6.text.toString()))
+            if(binding.editTextText.text.toString()!=""&&binding.editTextText2.text.toString()!=""&&
+            binding.editTextText3.text.toString()!=""&&binding.editTextText4.text.toString()!=""&&
+            binding.editTextText5.text.toString()!=""&&binding.editTextText6.text.toString()!=""){
+
+                if(binding.spinner.selectedItem=="Español")
+                {
+                    refEspañol.child(refEspañol.push().key.
+                    toString()).setValue(Model(binding.editTextText.text.toString(),binding.editTextText2.text.toString()
+                        ,binding.editTextText3.text.toString(),binding.editTextText4.text.toString(),
+                        binding.editTextText5.text.toString(),binding.editTextText6.text.toString()))
+                }
+                else if(binding.spinner.selectedItem=="Historia")
+                {
+                    refHistoria.child(refHistoria.push().key.
+                    toString()).setValue(Model(binding.editTextText.text.toString(),binding.editTextText2.text.toString()
+                        ,binding.editTextText3.text.toString(),binding.editTextText4.text.toString(),
+                        binding.editTextText5.text.toString(),binding.editTextText6.text.toString()))
+                }
+                else if(binding.spinner.selectedItem=="Matematicas")
+                {
+                    refMatematicas.child(refMatematicas.push().key.
+                    toString()).setValue(Model(binding.editTextText.text.toString(),binding.editTextText2.text.toString()
+                        ,binding.editTextText3.text.toString(),binding.editTextText4.text.toString(),
+                        binding.editTextText5.text.toString(),binding.editTextText6.text.toString()))
+                }
+                Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this@AgregarActivity,OptionesActivity::class.java))
+
             }
-            else if(binding.spinner.selectedItem=="Historia")
-            {
-                refHistoria.child(refHistoria.push().key.
-                toString()).setValue(Model(binding.editTextText.text.toString(),binding.editTextText2.text.toString()
-                    ,binding.editTextText3.text.toString(),binding.editTextText4.text.toString(),
-                    binding.editTextText5.text.toString(),binding.editTextText6.text.toString()))
+            else{
+                Toast.makeText(this, "Llene todos los campos", Toast.LENGTH_SHORT).show()
             }
-            else if(binding.spinner.selectedItem=="Matematicas")
-            {
-                refMatematicas.child(refMatematicas.push().key.
-                toString()).setValue(Model(binding.editTextText.text.toString(),binding.editTextText2.text.toString()
-                    ,binding.editTextText3.text.toString(),binding.editTextText4.text.toString(),
-                    binding.editTextText5.text.toString(),binding.editTextText6.text.toString()))
-            }
-            Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this@AgregarActivity,OptionesActivity::class.java))
+
         }
     }
 }
