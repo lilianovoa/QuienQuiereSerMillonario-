@@ -11,6 +11,8 @@ class ElegirCatActivity : AppCompatActivity() {
         var mate = ""
         var histo = ""
         var espa = ""
+        var depo = ""
+        var biol = ""
     }
     lateinit var binding: ActivityElegirCatBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +34,14 @@ class ElegirCatActivity : AppCompatActivity() {
             if(binding.histo.isChecked)
             {
                 histo="si"
+            }
+            if(binding.bio.isChecked)
+            {
+                biol="si"
+            }
+            if(binding.depo.isChecked)
+            {
+                depo="si"
             }
             startActivity(Intent(this@ElegirCatActivity,PlayActivity::class.java))
         }

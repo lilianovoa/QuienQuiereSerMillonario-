@@ -17,6 +17,8 @@ class AgregarActivity : AppCompatActivity() {
     lateinit var refEspañol: DatabaseReference
     lateinit var refMatematicas: DatabaseReference
     lateinit var refHistoria: DatabaseReference
+    lateinit var refDeporte: DatabaseReference
+    lateinit var refBiologia: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAgregarBinding.inflate(layoutInflater)
@@ -24,20 +26,22 @@ class AgregarActivity : AppCompatActivity() {
         refMatematicas = DB.getReference("Matematicas")
         refEspañol = DB.getReference("Español")
         refHistoria = DB.getReference("Historia")
+        refDeporte = DB.getReference("Deporte")
+        refBiologia = DB.getReference("Biologia")
         setContentView(binding.root)
         spinner()
         guardar()
     }
     fun spinner(){
-        val lista= listOf<String>("Español","Historia","Matematicas")
+        val lista= listOf<String>("Español","Historia","Matematicas","Deporte","Biologia")
         val adapter=ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,lista)
         binding.spinner.adapter = adapter
     }
     fun guardar(){
         binding.save.setOnClickListener {
             if(binding.editTextText.text.toString()!=""&&binding.editTextText2.text.toString()!=""&&
-            binding.editTextText3.text.toString()!=""&&binding.editTextText4.text.toString()!=""&&
-            binding.editTextText5.text.toString()!=""&&binding.editTextText6.text.toString()!=""){
+                binding.editTextText3.text.toString()!=""&&binding.editTextText4.text.toString()!=""&&
+                binding.editTextText5.text.toString()!=""&&binding.editTextText6.text.toString()!=""){
 
                 if(binding.spinner.selectedItem=="Español")
                 {
@@ -56,6 +60,20 @@ class AgregarActivity : AppCompatActivity() {
                 else if(binding.spinner.selectedItem=="Matematicas")
                 {
                     refMatematicas.child(refMatematicas.push().key.
+                    toString()).setValue(Model(binding.editTextText.text.toString(),binding.editTextText2.text.toString()
+                        ,binding.editTextText3.text.toString(),binding.editTextText4.text.toString(),
+                        binding.editTextText5.text.toString(),binding.editTextText6.text.toString()))
+                }
+                else if(binding.spinner.selectedItem=="Deporte")
+                {
+                    refDeporte.child(refDeporte.push().key.
+                    toString()).setValue(Model(binding.editTextText.text.toString(),binding.editTextText2.text.toString()
+                        ,binding.editTextText3.text.toString(),binding.editTextText4.text.toString(),
+                        binding.editTextText5.text.toString(),binding.editTextText6.text.toString()))
+                }
+                else if(binding.spinner.selectedItem=="Biologia")
+                {
+                    refBiologia.child(refBiologia.push().key.
                     toString()).setValue(Model(binding.editTextText.text.toString(),binding.editTextText2.text.toString()
                         ,binding.editTextText3.text.toString(),binding.editTextText4.text.toString(),
                         binding.editTextText5.text.toString(),binding.editTextText6.text.toString()))

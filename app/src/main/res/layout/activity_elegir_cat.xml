@@ -26,7 +26,7 @@
         android:id="@+id/histo"
         android:layout_width="259dp"
         android:layout_height="50dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/adamina"
         android:text="Historia"
         android:textColor="#0B0A0A"
@@ -38,10 +38,40 @@
         app:layout_constraintTop_toBottomOf="@+id/mate" />
 
     <RadioButton
+        android:id="@+id/depo"
+        android:layout_width="259dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/adamina"
+        android:text="Deporte"
+        android:textColor="#0B0A0A"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/histo" />
+
+    <RadioButton
+        android:id="@+id/bio"
+        android:layout_width="259dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/adamina"
+        android:text="Biologia"
+        android:textColor="#0B0A0A"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/histo" />
+
+    <RadioButton
         android:id="@+id/espa"
         android:layout_width="259dp"
         android:layout_height="50dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="228dp"
         android:fontFamily="@font/adamina"
         android:text="Español"
         android:textColor="#0B0A0A"
@@ -56,7 +86,7 @@
         android:id="@+id/jugar"
         android:layout_width="191dp"
         android:layout_height="61dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/archivo_black"
         android:text="Siguiente"
